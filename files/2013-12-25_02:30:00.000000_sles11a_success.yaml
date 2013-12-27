@@ -1,0 +1,2694 @@
+--- !ruby/object:Puppet::Transaction::Report
+  metrics: 
+    resources: !ruby/object:Puppet::Util::Metric
+      name: resources
+      label: Resources
+      values: 
+        - - total
+          - Total
+          - 84
+        - - skipped
+          - Skipped
+          - 0
+        - - failed
+          - Failed
+          - 0
+        - - failed_to_restart
+          - "Failed to restart"
+          - 0
+        - - restarted
+          - Restarted
+          - 0
+        - - changed
+          - Changed
+          - 0
+        - - out_of_sync
+          - "Out of sync"
+          - 0
+        - - scheduled
+          - Scheduled
+          - 0
+    time: !ruby/object:Puppet::Util::Metric
+      name: time
+      label: Time
+      values: 
+        - - schedule
+          - Schedule
+          - 0.000630448
+        - - file
+          - File
+          - 0.033637753
+        - - cron
+          - Cron
+          - 0.000561196
+        - - filebucket
+          - Filebucket
+          - 0.000274278
+        - - service
+          - Service
+          - 0.149801902
+        - - config_retrieval
+          - "Config retrieval"
+          - 2.064663179
+        - - total
+          - Total
+          - 2.249568756
+    changes: !ruby/object:Puppet::Util::Metric
+      name: changes
+      label: Changes
+      values: 
+        - - total
+          - Total
+          - 0
+    events: !ruby/object:Puppet::Util::Metric
+      name: events
+      label: Events
+      values: 
+        - - total
+          - Total
+          - 0
+        - - failure
+          - Failure
+          - 0
+        - - success
+          - Success
+          - 0
+  logs: 
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+      message: "Finished catalog run in 0.94 seconds"
+      source: Puppet
+      time: 2013-12-25 02:30:00.000000
+  resource_statuses: 
+    Schedule[daily]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[daily]
+      file: 
+      line: 
+      evaluation_time: 0.000186455
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - daily
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: daily
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[daily]
+    Schedule[monthly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[monthly]
+      file: 
+      line: 
+      evaluation_time: 6.6885e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - monthly
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: monthly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[monthly]
+    Schedule[hourly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[hourly]
+      file: 
+      line: 
+      evaluation_time: 6.3496e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - hourly
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: hourly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[hourly]
+    File[/opt/puppet/sbin/refresh-mcollective-metadata]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/sbin/refresh-mcollective-metadata]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/server.pp
+      line: 107
+      evaluation_time: 0.001782705
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server"
+        - pe_mcollective
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/sbin/refresh-mcollective-metadata
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server"
+        - File[/opt/puppet/sbin/refresh-mcollective-metadata]
+    Cron[pe-mcollective-metadata]: !ruby/object:Puppet::Resource::Status
+      resource: Cron[pe-mcollective-metadata]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/server.pp
+      line: 112
+      evaluation_time: 0.000561196
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - cron
+        - pe-mcollective-metadata
+        - class
+        - "pe_mcollective::server"
+        - pe_mcollective
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Cron
+      title: pe-mcollective-metadata
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server"
+        - Cron[pe-mcollective-metadata]
+    File[/opt/puppet/libexec/mcollective/mcollective]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/server/plugins.pp
+      line: 41
+      evaluation_time: 0.000603906
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective]
+    File[/opt/puppet/libexec/mcollective/mcollective/data]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/data]
+      file: 
+      line: 
+      evaluation_time: 0.000434498
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/data
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/data]
+    File[/opt/puppet/libexec/mcollective/mcollective/data/resource_data.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/data/resource_data.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000574091
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/data/resource_data.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/data/resource_data.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/security]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/security]
+      file: 
+      line: 
+      evaluation_time: 0.000381512
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/security
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/security]
+    File[/opt/puppet/libexec/mcollective/mcollective/security/sshkey.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/security/sshkey.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000339205
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/security/sshkey.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/security/sshkey.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/application]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/application]
+      file: 
+      line: 
+      evaluation_time: 0.000355034
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/application
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/application]
+    File[/opt/puppet/libexec/mcollective/mcollective/application/package.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/application/package.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000434759
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/application/package.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/application/package.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/application/service.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/application/service.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000432396
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/application/service.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/application/service.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/validator]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/validator]
+      file: 
+      line: 
+      evaluation_time: 0.000333603
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/validator
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/validator]
+    File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_tags_validator.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_tags_validator.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.000446139
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/validator/puppet_tags_validator.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_tags_validator.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_server_address_validator.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_server_address_validator.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000417372
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/validator/puppet_server_address_validator.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_server_address_validator.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_resource_validator.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_resource_validator.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000414254
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/validator/puppet_resource_validator.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_resource_validator.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_variable_validator.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_variable_validator.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.000962982
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/validator/puppet_variable_validator.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_variable_validator.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/validator/service_name.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/validator/service_name.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000448468
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/validator/service_name.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/validator/service_name.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/validator/service_name.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/validator/service_name.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.000475771
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/validator/service_name.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/validator/service_name.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_variable_validator.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_variable_validator.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000323562
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/validator/puppet_variable_validator.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_variable_validator.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_server_address_validator.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_server_address_validator.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.000429002
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/validator/puppet_server_address_validator.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_server_address_validator.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/data/puppet_data.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/data/puppet_data.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.000410125
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/data/puppet_data.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/data/puppet_data.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/registration]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/registration]
+      file: 
+      line: 
+      evaluation_time: 0.000473195
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/registration
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/registration]
+    File[/opt/puppet/libexec/mcollective/mcollective/registration/meta.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/registration/meta.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000499078
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/registration/meta.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/registration/meta.rb]
+    Filebucket[main]: !ruby/object:Puppet::Resource::Status
+      resource: Filebucket[main]
+      file: /etc/puppetlabs/puppet/environments/production/manifests/site.pp
+      line: 24
+      evaluation_time: 0.000187285
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - filebucket
+        - main
+        - class
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Filebucket
+      title: main
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - ""
+        - Filebucket[main]
+    File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_resource_validator.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_resource_validator.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.000474598
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/validator/puppet_resource_validator.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_resource_validator.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/application/puppet.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/application/puppet.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000452655
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/application/puppet.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/application/puppet.rb]
+    Schedule[never]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[never]
+      file: 
+      line: 
+      evaluation_time: 0.000122384
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - never
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: never
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[never]
+    File[/opt/puppet/libexec/mcollective/mcollective/data/service_data.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/data/service_data.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000434091
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/data/service_data.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/data/service_data.rb]
+    Filebucket[puppet]: !ruby/object:Puppet::Resource::Status
+      resource: Filebucket[puppet]
+      file: 
+      line: 
+      evaluation_time: 8.6993e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - filebucket
+        - puppet
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Filebucket
+      title: puppet
+      skipped: false
+      failed: false
+      containment_path: 
+        - Filebucket[puppet]
+    File[/opt/puppet/libexec/mcollective/mcollective/agent]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/agent]
+      file: 
+      line: 
+      evaluation_time: 0.000340983
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/agent
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/agent]
+    File[/opt/puppet/libexec/mcollective/mcollective/agent/puppet.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/agent/puppet.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.000515615
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/agent/puppet.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/agent/puppet.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/agent/package.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/agent/package.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.000465204
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/agent/package.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/agent/package.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetral.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetral.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000417538
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/agent/puppetral.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetral.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/agent/service.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/agent/service.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.000419477
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/agent/service.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/agent/service.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetral.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetral.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.00046716
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/agent/puppetral.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetral.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/agent/service.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/agent/service.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000419372
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/agent/service.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/agent/service.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/agent/package.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/agent/package.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000414193
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/agent/package.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/agent/package.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/agent/puppet.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/agent/puppet.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000440129
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/agent/puppet.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/agent/puppet.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_tags_validator.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_tags_validator.rb]
+      file: 
+      line: 
+      evaluation_time: 0.001037621
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/validator/puppet_tags_validator.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_tags_validator.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/data/service_data.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/data/service_data.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.000427219
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/data/service_data.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/data/service_data.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/data/resource_data.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/data/resource_data.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.000223578
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/data/resource_data.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/data/resource_data.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/data/puppet_data.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/data/puppet_data.rb]
+      file: 
+      line: 
+      evaluation_time: 0.00040584
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/data/puppet_data.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/data/puppet_data.rb]
+    Schedule[weekly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[weekly]
+      file: 
+      line: 
+      evaluation_time: 0.000102615
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - weekly
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: weekly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[weekly]
+    File[/opt/puppet/libexec/mcollective/mcollective/util]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util]
+      file: 
+      line: 
+      evaluation_time: 0.000356113
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/package]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/package]
+      file: 
+      line: 
+      evaluation_time: 0.000684335
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/package
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/package]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000409242
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr]
+      file: 
+      line: 
+      evaluation_time: 0.00035735
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2]
+      file: 
+      line: 
+      evaluation_time: 0.000384532
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/unix.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/unix.rb]
+      file: 
+      line: 
+      evaluation_time: 0.00041443
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/unix.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/unix.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/windows.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/windows.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000399077
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/windows.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/windows.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/actionpolicy.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/actionpolicy.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000440883
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/actionpolicy.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/actionpolicy.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/package/packagehelpers.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/package/packagehelpers.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000333976
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/package/packagehelpers.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/package/packagehelpers.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3]
+      file: 
+      line: 
+      evaluation_time: 0.000318239
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/unix.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/unix.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000423183
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/unix.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/unix.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/manager.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/manager.rb]
+      file: 
+      line: 
+      evaluation_time: 0.001015441
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/manager.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/manager.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/manager.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/manager.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000405939
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/manager.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/manager.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/puppetrunner.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/puppetrunner.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000380233
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/puppetrunner.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/puppetrunner.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/windows.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/windows.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000380271
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/windows.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/windows.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/package/base.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/package/base.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000422328
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/package/base.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/package/base.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/common.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/common.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000457022
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/common.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/common.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/package/puppetpackage.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/package/puppetpackage.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000454248
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/package/puppetpackage.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/package/puppetpackage.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/aggregate]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/aggregate]
+      file: 
+      line: 
+      evaluation_time: 0.000369703
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/aggregate
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/aggregate]
+    File[/opt/puppet/libexec/mcollective/mcollective/aggregate/boolean_summary.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/aggregate/boolean_summary.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.000278952
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/aggregate/boolean_summary.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/aggregate/boolean_summary.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/aggregate/boolean_summary.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/aggregate/boolean_summary.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000433417
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/aggregate/boolean_summary.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/aggregate/boolean_summary.rb]
+    File[/etc/puppetlabs/mcollective/server.cfg]: !ruby/object:Puppet::Resource::Status
+      resource: File[/etc/puppetlabs/mcollective/server.cfg]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/server.pp
+      line: 69
+      evaluation_time: 0.000572563
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server"
+        - pe_mcollective
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /etc/puppetlabs/mcollective/server.cfg
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server"
+        - File[/etc/puppetlabs/mcollective/server.cfg]
+    Schedule[puppet]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[puppet]
+      file: 
+      line: 
+      evaluation_time: 8.8613e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - puppet
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: puppet
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[puppet]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/service]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/service]
+      file: 
+      line: 
+      evaluation_time: 0.000182883
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/service
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/service]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/service/base.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/service/base.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000603427
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/service/base.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/service/base.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/service/puppetservice.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/service/puppetservice.rb]
+      file: 
+      line: 
+      evaluation_time: 0.000394313
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/service/puppetservice.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/service/puppetservice.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetd.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetd.ddl]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/server/plugins.pp
+      line: 45
+      evaluation_time: 0.000587644
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/agent/puppetd.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetd.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetd.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetd.rb]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/server/plugins.pp
+      line: 43
+      evaluation_time: 0.000278285
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/agent/puppetd.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetd.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/application/puppetd.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/application/puppetd.rb]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/server/plugins.pp
+      line: 47
+      evaluation_time: 0.000317796
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/application/puppetd.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/application/puppetd.rb]
+    File[/etc/puppetlabs/mcollective/ssl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/etc/puppetlabs/mcollective/ssl]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/shared_key_files.pp
+      line: 31
+      evaluation_time: 0.000250872
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - pe_mco_server
+        - class
+        - "pe_mcollective::shared_key_files"
+        - pe_mcollective
+        - shared_key_files
+        - "pe_mcollective::server"
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /etc/puppetlabs/mcollective/ssl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Shared_key_files"
+        - File[/etc/puppetlabs/mcollective/ssl]
+    File[mcollective-private.pem]: !ruby/object:Puppet::Resource::Status
+      resource: File[mcollective-private.pem]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/shared_key_files.pp
+      line: 51
+      evaluation_time: 0.000380372
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - mcollective-private.pem
+        - pe_mco_server
+        - class
+        - "pe_mcollective::shared_key_files"
+        - pe_mcollective
+        - shared_key_files
+        - "pe_mcollective::server"
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: mcollective-private.pem
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Shared_key_files"
+        - File[mcollective-private.pem]
+    File[mcollective-cacert.pem]: !ruby/object:Puppet::Resource::Status
+      resource: File[mcollective-cacert.pem]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/shared_key_files.pp
+      line: 63
+      evaluation_time: 0.000189883
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - mcollective-cacert.pem
+        - pe_mco_server
+        - class
+        - "pe_mcollective::shared_key_files"
+        - pe_mcollective
+        - shared_key_files
+        - "pe_mcollective::server"
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: mcollective-cacert.pem
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Shared_key_files"
+        - File[mcollective-cacert.pem]
+    File[mcollective-public.pem]: !ruby/object:Puppet::Resource::Status
+      resource: File[mcollective-public.pem]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/shared_key_files.pp
+      line: 44
+      evaluation_time: 0.000324597
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - mcollective-public.pem
+        - pe_mco_server
+        - class
+        - "pe_mcollective::shared_key_files"
+        - pe_mcollective
+        - shared_key_files
+        - "pe_mcollective::server"
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: mcollective-public.pem
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Shared_key_files"
+        - File[mcollective-public.pem]
+    File[mcollective-cert.pem]: !ruby/object:Puppet::Resource::Status
+      resource: File[mcollective-cert.pem]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/shared_key_files.pp
+      line: 57
+      evaluation_time: 0.000353187
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - mcollective-cert.pem
+        - pe_mco_server
+        - class
+        - "pe_mcollective::shared_key_files"
+        - pe_mcollective
+        - shared_key_files
+        - "pe_mcollective::server"
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: mcollective-cert.pem
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Shared_key_files"
+        - File[mcollective-cert.pem]
+    File[/etc/puppetlabs/mcollective/ssl/clients]: !ruby/object:Puppet::Resource::Status
+      resource: File[/etc/puppetlabs/mcollective/ssl/clients]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/shared_key_files.pp
+      line: 36
+      evaluation_time: 0.000255133
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - pe_mco_server
+        - class
+        - "pe_mcollective::shared_key_files"
+        - pe_mcollective
+        - shared_key_files
+        - "pe_mcollective::server"
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /etc/puppetlabs/mcollective/ssl/clients
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Shared_key_files"
+        - File[/etc/puppetlabs/mcollective/ssl/clients]
+    File[peadmin-public.pem]: !ruby/object:Puppet::Resource::Status
+      resource: File[peadmin-public.pem]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/shared_key_files.pp
+      line: 71
+      evaluation_time: 0.000343472
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - peadmin-public.pem
+        - pe_mco_server
+        - class
+        - "pe_mcollective::shared_key_files"
+        - pe_mcollective
+        - shared_key_files
+        - "pe_mcollective::server"
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: peadmin-public.pem
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Shared_key_files"
+        - File[peadmin-public.pem]
+    File[/etc/puppetlabs/mcollective/ssl/clients/mcollective-public.pem]: !ruby/object:Puppet::Resource::Status
+      resource: File[/etc/puppetlabs/mcollective/ssl/clients/mcollective-public.pem]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/server.pp
+      line: 43
+      evaluation_time: 0.000815081
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server"
+        - pe_mcollective
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /etc/puppetlabs/mcollective/ssl/clients/mcollective-public.pem
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server"
+        - File[/etc/puppetlabs/mcollective/ssl/clients/mcollective-public.pem]
+    File[puppet-dashboard-public.pem]: !ruby/object:Puppet::Resource::Status
+      resource: File[puppet-dashboard-public.pem]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/shared_key_files.pp
+      line: 77
+      evaluation_time: 0.000342401
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - puppet-dashboard-public.pem
+        - pe_mco_server
+        - class
+        - "pe_mcollective::shared_key_files"
+        - pe_mcollective
+        - shared_key_files
+        - "pe_mcollective::server"
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: puppet-dashboard-public.pem
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Shared_key_files"
+        - File[puppet-dashboard-public.pem]
+    Service[pe-mcollective]: !ruby/object:Puppet::Resource::Status
+      resource: Service[pe-mcollective]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/server.pp
+      line: 75
+      evaluation_time: 0.149801902
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - service
+        - pe-mcollective
+        - class
+        - "pe_mcollective::server"
+        - pe_mcollective
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - default
+      time: 2013-12-25 02:30:00.000000
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Service
+      title: pe-mcollective
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server"
+        - Service[pe-mcollective]
+  host: sles11a
+  time: 2013-12-25 02:30:00.000000
+  kind: apply
+  report_format: 4
+  puppet_version: "3.3.1 (Puppet Enterprise 3.1.0)"
+  configuration_version: 1388105301
+  transaction_uuid: "572d0cc3-b56c-495a-b872-825b3ffa65d1"
+  environment: production
+  status: unchanged

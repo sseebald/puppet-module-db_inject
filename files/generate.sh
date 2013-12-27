@@ -1,43 +1,62 @@
 #!/bin/bash
 
+#------< To-dos >-------
+#-- input logic scrubbing
+#-- clean up files
+
 NUM_DAYS="$1"
+NUM_RUNS="$2"
 DATE_END=$(/bin/date +%D)
-DATE_START=$(/bin/date --date="${NUM_DAYS} days ago -1 day" +"%D")
-
-for ((i=0;i<$NUM_DAYS;i++))
+DATE_START=$(/bin/date --date="${NUM_DAYS} days ago -1 day" +"%F")
+servers=( master centos64a centos64b centos64c debian607a ubuntu1204a solaris10a sles11a server2008r1 server2008r2b centos59a )
+outcomes=( success changes pending failed )
+	
+for z in "${outcomes[@]}"
 do
-	DATE_START=$(/bin/date --date="${DATE_START} +1 day" +"%F")
-	#echo $DATE_START
-
-	#t="00:00:00"
-	
-	for ((x=0;x<48;x++))
+	for ((i=0;i<$NUM_DAYS;i++))
 	do
-		if [ $(($x/2*2)) -eq $x ]; then 
-			echo "The current hour is $(($x/2)), $x"
-			if [ $(($x/2)) -lt 10 ]; then
-				t=0$(($x/2)):00:00.000000
+		case $z in
+			"success") NUM_RUNS=$(($NUM_RUNS/2))
+			;;
+			"changes") NUM_RUNS=$(($NUM_RUNS/4))
+			;;
+			"pending") NUM_RUNS=$(($NUM_RUNS/6))
+			;;
+			"failed") NUM_RUNS=$(($NUM_RUNS/6))
+			;;
+		esac
+
+		for ((x=0;x<$NUM_RUNS;x++))
+		do
+			
+			if [ $(($x/2*2)) -eq $x ]; then 
+				if [ $((x/2)) -lt 10 ]; then
+					t=0$((x/2)):00:00.000000
+				else
+					t=$((x/2)):00:00.000000
+				fi
 			else
-				t=$(($x/2)):00:00.000000
-				echo $t
+				if [ $((x/2)) -lt 10 ]; then
+					t=0$((x/2)):30:00.000000
+				else
+					t=$((x/2)):30:00.000000
+				fi
 			fi
-		else
-			if [ $(($x/2)) -lt 10 ]; then
-				t=0$(($x/2)):30:00.000000
-			else
-				t=$(($x/2)):30:00.000000
-				echo $t
-			fi
-		fi
 
-		cp -r /etc/puppetlabs/puppet/environments/production/modules/db_inject/templates/failed.erb /etc/puppetlabs/puppet/environments/production/modules/db_inject/files/${DATE_START}_${t}.yaml
+			for y in "${servers[@]}"
+			do
 
-		sed -i "s/\$time/$t/g" /etc/puppetlabs/puppet/environments/production/modules/db_inject/files/${DATE_START}_${t}.yaml
-		sed -i "s/\$date/$DATE_START/g" /etc/puppetlabs/puppet/environments/production/modules/db_inject/files/${DATE_START}_${t}.yaml
-
-		#echo $DATE_START $t >> /etc/test.txt
-		
-		curl -k -sSF report="<${DATE_START}_${t}.yaml" https://localhost/reports/upload
-	
+				cp -r /etc/puppetlabs/puppet/environments/production/modules/db_inject/templates/${z}.erb /etc/puppetlabs/puppet/environments/production/modules/db_inject/files/${DATE_START}_${t}_${y}_${z}.yaml
+			
+				sed -i "s/\$time/$t/g" /etc/puppetlabs/puppet/environments/production/modules/db_inject/files/${DATE_START}_${t}_${y}_${z}.yaml
+				sed -i "s/\$date/$DATE_START/g" /etc/puppetlabs/puppet/environments/production/modules/db_inject/files/${DATE_START}_${t}_${y}_${z}.yaml
+				sed -i "s/\$server/$y/g" /etc/puppetlabs/puppet/environments/production/modules/db_inject/files/${DATE_START}_${t}_${y}_${z}.yaml
+			
+				#curl -k -sSF report="<${DATE_START}_${t}_${y}.yaml" https://localhost/reports/upload
+			done
+		done
 	done
 done
+
+#rm -rf /etc/puppetlabs/puppet/environments/production/modules/db_inject/files/2013*
+
