@@ -52,7 +52,7 @@ do
 				sed -i "s/\$date/$DATE_START/g" /etc/puppetlabs/puppet/environments/production/modules/db_inject/files/${DATE_START}_${t}_${y}_${z}.yaml
 				sed -i "s/\$server/$y/g" /etc/puppetlabs/puppet/environments/production/modules/db_inject/files/${DATE_START}_${t}_${y}_${z}.yaml
 			
-				#curl -k -sSF report="<${DATE_START}_${t}_${y}.yaml" https://localhost/reports/upload
+				curl -k -sSF report="<${DATE_START}_${t}_${y}_${z}.yaml" https://localhost/reports/upload
 			done
 		done
 	done

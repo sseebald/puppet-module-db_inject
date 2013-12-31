@@ -1,0 +1,6235 @@
+--- !ruby/object:Puppet::Transaction::Report
+  metrics: 
+    resources: !ruby/object:Puppet::Util::Metric
+      name: resources
+      label: Resources
+      values: 
+        - - total
+          - Total
+          - 115
+        - - skipped
+          - Skipped
+          - 0
+        - - failed
+          - Failed
+          - 0
+        - - failed_to_restart
+          - "Failed to restart"
+          - 0
+        - - restarted
+          - Restarted
+          - 2
+        - - changed
+          - Changed
+          - 86
+        - - out_of_sync
+          - "Out of sync"
+          - 86
+        - - scheduled
+          - Scheduled
+          - 0
+    time: !ruby/object:Puppet::Util::Metric
+      name: time
+      label: Time
+      values: 
+        - - schedule
+          - Schedule
+          - 0.000632402
+        - - package
+          - Package
+          - 148.052313457
+        - - service
+          - Service
+          - 1.182308594
+        - - filebucket
+          - Filebucket
+          - 9.4931e-05
+        - - firewall
+          - Firewall
+          - 1.8207751499999998
+        - - file
+          - File
+          - 2.310507627
+        - - cron
+          - Cron
+          - 0.00542476
+        - - resources
+          - Resources
+          - 0.000148022
+        - - anchor
+          - Anchor
+          - 0.000479294
+        - - exec
+          - Exec
+          - 24.020150574
+        - - config_retrieval
+          - "Config retrieval"
+          - 1.814697784
+        - - total
+          - Total
+          - 179.207532595
+    changes: !ruby/object:Puppet::Util::Metric
+      name: changes
+      label: Changes
+      values: 
+        - - total
+          - Total
+          - 87
+    events: !ruby/object:Puppet::Util::Metric
+      name: events
+      label: Events
+      values: 
+        - - total
+          - Total
+          - 87
+        - - failure
+          - Failure
+          - 0
+        - - success
+          - Success
+          - 87
+  logs: 
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - firewall
+        - class
+        - "profile::firewall::pre"
+        - profile
+        - pre
+        - "profile::firewall"
+        - "profile::tomcat"
+        - tomcat
+        - node
+        - $server
+      message: created
+      source: "/Firewall[000 accept all icmp]/ensure"
+      time: $date $time
+      file: /etc/puppetlabs/puppet/environments/production/modules/profile/manifests/firewall/pre.pp
+      line: 12
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - firewall
+        - class
+        - "profile::firewall::pre"
+        - profile
+        - pre
+        - "profile::firewall"
+        - "profile::tomcat"
+        - tomcat
+        - node
+        - $server
+      message: created
+      source: "/Firewall[001 accept all to lo interface]/ensure"
+      time: $date $time
+      file: /etc/puppetlabs/puppet/environments/production/modules/profile/manifests/firewall/pre.pp
+      line: 17
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - firewall
+        - class
+        - "profile::firewall::pre"
+        - profile
+        - pre
+        - "profile::firewall"
+        - "profile::tomcat"
+        - tomcat
+        - node
+        - $server
+      message: created
+      source: "/Firewall[002 accept related established rules]/ensure"
+      time: $date $time
+      file: /etc/puppetlabs/puppet/environments/production/modules/profile/manifests/firewall/pre.pp
+      line: 22
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - firewall
+        - class
+        - "profile::tomcat"
+        - profile
+        - tomcat
+        - node
+        - $server
+      message: created
+      source: "/Firewall[100 allow connections to tomcat]/ensure"
+      time: $date $time
+      file: /etc/puppetlabs/puppet/environments/production/modules/profile/manifests/tomcat.pp
+      line: 19
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server"
+        - pe_mcollective
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}b816be63b8fa63a8dc0d8be2f6c90c38'"
+      source: "/Stage[main]/Pe_mcollective::Server/File[/opt/puppet/sbin/refresh-mcollective-metadata]/ensure"
+      time: $date $time
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/server.pp
+      line: 107
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - cron
+        - pe-mcollective-metadata
+        - class
+        - "pe_mcollective::server"
+        - pe_mcollective
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: created
+      source: "/Stage[main]/Pe_mcollective::Server/Cron[pe-mcollective-metadata]/ensure"
+      time: $date $time
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/server.pp
+      line: 112
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}41e785704e01cfab6a6c88ebd921bbb9'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/data/resource_data.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}8fa3e9125fd917948445e3d2621d40e5'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/security/sshkey.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: created
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/application]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}afcd9a561b087049eccb648a940b592e'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/application/package.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}799681457f0f707a7166da086f97e473'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/application/service.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}7ed95b2e5b210db83d12d5034f1ecb0f'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_tags_validator.ddl]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}9824a78753512eaecb65a95e93cd874b'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_server_address_validator.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}567c7dc4d70ed0db7fd2626c77f6df41'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_resource_validator.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}58c9db4ca4503e4d692a016743e01627'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_variable_validator.ddl]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}3f501a9ed252ce2dfe06a2e1e53845ab'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/validator/service_name.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}2812afa15108103042f706c2201e286b'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/validator/service_name.ddl]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}3cbca3af2e5884f2a807ef005a87151b'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_variable_validator.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}323e0b9647639fdf32cfbc63a82860f7'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_server_address_validator.ddl]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}5c9912bf5ae5dbc8762109a40c027c63'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/data/puppet_data.ddl]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}e939958bbbc0817e1779c336037e1849'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/registration/meta.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}3e45a28e1ba6c8d22ce40934c04b30b4'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_resource_validator.ddl]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}3037b1f9a29fba97bd1196186997aba6'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/application/puppet.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}bc651898c7dcd373d609c933fbd6021f'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/data/service_data.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - firewall
+        - resources
+        - class
+        - "profile::firewall"
+        - profile
+        - "profile::tomcat"
+        - tomcat
+        - node
+        - $server
+      message: removed
+      source: "/Stage[main]/Profile::Firewall/Firewall[9004 dc0f1adfee77aa04ef7fdf348860a701]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - firewall
+        - resources
+        - class
+        - "profile::firewall"
+        - profile
+        - "profile::tomcat"
+        - tomcat
+        - node
+        - $server
+      message: removed
+      source: "/Stage[main]/Profile::Firewall/Firewall[9001 fe701ab7ca74bd49f13b9f0ab39f3254]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - firewall
+        - resources
+        - class
+        - "profile::firewall"
+        - profile
+        - "profile::tomcat"
+        - tomcat
+        - node
+        - $server
+      message: removed
+      source: "/Stage[main]/Profile::Firewall/Firewall[9006 9c205c1da32aab86e155ff77334c5fc8]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - firewall
+        - resources
+        - class
+        - "profile::firewall"
+        - profile
+        - "profile::tomcat"
+        - tomcat
+        - node
+        - $server
+      message: removed
+      source: "/Stage[main]/Profile::Firewall/Firewall[9002 a627067f779aaa7406fa9062efa4550e]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - staging
+        - "profile::staging"
+        - profile
+        - "profile::app::jenkins"
+        - app
+        - jenkins
+        - node
+        - $server
+      message: created
+      source: /Stage[main]/Staging/File[/var/staging]/ensure
+      time: $date $time
+      file: /etc/puppetlabs/puppet/environments/production/modules/staging/manifests/init.pp
+      line: 25
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}a91fe7c5346acc72cbfbbda1a30a9186'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/agent/puppet.ddl]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}91071e5a4c437b889be3013663e6400f'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/agent/package.ddl]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}5bc9d72845574a3fc08c9062b4b28dd3'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetral.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}59ab37f55d8e16fda6a2103682545934'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/agent/service.ddl]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}7f06f13953847e60818a681c1f2f168b'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetral.ddl]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}cbf84ed615eeda9789650b05ec504566'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/agent/service.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}a069c5ae29e1b2f3a8fe2bb9a10f32ca'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/agent/package.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}d720f6de212c1f1b03603aed52d9d656'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/agent/puppet.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}40b29498e867ba2ecf21dc08bc457d4e'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_tags_validator.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}e7f7e0bc65ede56fc636505a400b1700'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/data/service_data.ddl]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}c4e3a46fd3c0b5d3990db0b8af1c747f'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/data/resource_data.ddl]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}021d22f47251cd3027ba1777e3503d72'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/data/puppet_data.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - package
+        - tomcat6-admin-webapps
+        - class
+        - "tomcat::app::admin"
+        - tomcat
+        - app
+        - admin
+        - "profile::tomcat"
+        - profile
+        - node
+        - $server
+      message: created
+      source: "/Stage[main]/Tomcat::App::Admin/Package[tomcat6-admin-webapps]/ensure"
+      time: $date $time
+      file: /etc/puppetlabs/puppet/environments/production/modules/tomcat/manifests/app/admin.pp
+      line: 7
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - package
+        - tomcat6-webapps
+        - class
+        - "tomcat::app::admin"
+        - tomcat
+        - app
+        - admin
+        - "profile::tomcat"
+        - profile
+        - node
+        - $server
+      message: created
+      source: "/Stage[main]/Tomcat::App::Admin/Package[tomcat6-webapps]/ensure"
+      time: $date $time
+      file: /etc/puppetlabs/puppet/environments/production/modules/tomcat/manifests/app/admin.pp
+      line: 7
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - package
+        - java
+        - class
+        - tomcat
+        - "profile::tomcat"
+        - profile
+        - node
+        - $server
+      message: created
+      source: /Stage[main]/Java/Package[java]/ensure
+      time: $date $time
+      file: /etc/puppetlabs/puppet/environments/production/modules/java/manifests/init.pp
+      line: 89
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - package
+        - tomcat6-docs-webapp
+        - class
+        - "tomcat::app::docs"
+        - tomcat
+        - app
+        - docs
+        - "profile::tomcat"
+        - profile
+        - node
+        - $server
+      message: created
+      source: "/Stage[main]/Tomcat::App::Docs/Package[tomcat6-docs-webapp]/ensure"
+      time: $date $time
+      file: /etc/puppetlabs/puppet/environments/production/modules/tomcat/manifests/app/docs.pp
+      line: 7
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - tomcat
+        - "profile::tomcat"
+        - profile
+        - node
+        - $server
+      message: created
+      source: /Stage[main]/Tomcat/File[/var/lib/tomcat6/staging]/ensure
+      time: $date $time
+      file: /etc/puppetlabs/puppet/environments/production/modules/tomcat/manifests/init.pp
+      line: 24
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - firewall
+        - resources
+        - class
+        - "profile::firewall"
+        - profile
+        - "profile::tomcat"
+        - tomcat
+        - node
+        - $server
+      message: removed
+      source: "/Stage[main]/Profile::Firewall/Firewall[9003 49bcd611c61bdd18b235cea46ef04fae]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: created
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/util]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: created
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/util/package]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}04efaa640da811eb6c85eba52d55a634'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: created
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: created
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}7fb044bc9976103bbbee1190ba5d8f87'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/unix.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}3f9d91026b11241a53bd4120d86fc625'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/windows.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}e4d6a7024ad7b28e019e7b9931eac027'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/util/actionpolicy.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}af83db4ea2647516e50358df4166e571'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/util/package/packagehelpers.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: created
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}ad1047da94aa0cba329f709433e424ef'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/unix.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}c59cc70c811ea2d373a9b8cf6ac3234a'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/manager.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}4b382b289182cf86161ecfde337b0229'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/manager.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}9754554827cb37b768c63beac35da49b'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/util/puppetrunner.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}5ec3972e4c68c0479a7ecb5186677166'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/windows.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}1bdb7e7a6dcfea6fd2a06c5dc39b7276'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/util/package/base.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}9812103e96f86be5cbe585bcf0cfc5cf'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/common.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}161b48fa538e0ddd0118ab09f9405c51'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/util/package/puppetpackage.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - firewall
+        - resources
+        - class
+        - "profile::firewall"
+        - profile
+        - "profile::tomcat"
+        - tomcat
+        - node
+        - $server
+      message: removed
+      source: "/Stage[main]/Profile::Firewall/Firewall[9005 32828795e9fcabe60ef2ca2c1d6ccf05]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: created
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/aggregate]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}aa581c71a6c7658bffdbaec81590f65d'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/aggregate/boolean_summary.ddl]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}0546063313508d8aff603be320af3c44'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/aggregate/boolean_summary.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server"
+        - pe_mcollective
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "content changed '{md5}a9c7335a83c5ac9f6a19bb195ea0c63e' to '{md5}50968ab8582188d68b9180fd3a0d057d'"
+      source: "/Stage[main]/Pe_mcollective::Server/File[/etc/puppetlabs/mcollective/server.cfg]/content"
+      time: $date $time
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/server.pp
+      line: 69
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server"
+        - pe_mcollective
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "mode changed '0640' to '0600'"
+      source: "/Stage[main]/Pe_mcollective::Server/File[/etc/puppetlabs/mcollective/server.cfg]/mode"
+      time: $date $time
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/server.pp
+      line: 69
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: created
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/util/service]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}abea7b8fadbf3425a7b68b49b9435ff6'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/util/service/base.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}905db93e1c06ad5a7154fa2f9199f31c'"
+      source: "/Stage[main]/Pe_mcollective::Server::Plugins/File[/opt/puppet/libexec/mcollective/mcollective/util/service/puppetservice.rb]/ensure"
+      time: $date $time
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - mcollective-private.pem
+        - pe_mco_server
+        - class
+        - "pe_mcollective::shared_key_files"
+        - pe_mcollective
+        - shared_key_files
+        - "pe_mcollective::server"
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}6c658e7bcdb66c4ccdc9fab3de7d5e87'"
+      source: "/Stage[main]/Pe_mcollective::Shared_key_files/File[mcollective-private.pem]/ensure"
+      time: $date $time
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/shared_key_files.pp
+      line: 51
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - mcollective-cacert.pem
+        - pe_mco_server
+        - class
+        - "pe_mcollective::shared_key_files"
+        - pe_mcollective
+        - shared_key_files
+        - "pe_mcollective::server"
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}ecca77abacb49454cbad89ecafa42c4f'"
+      source: "/Stage[main]/Pe_mcollective::Shared_key_files/File[mcollective-cacert.pem]/ensure"
+      time: $date $time
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/shared_key_files.pp
+      line: 63
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - mcollective-public.pem
+        - pe_mco_server
+        - class
+        - "pe_mcollective::shared_key_files"
+        - pe_mcollective
+        - shared_key_files
+        - "pe_mcollective::server"
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}3cd7cd2c1056054fcedf88e011f8a20b'"
+      source: "/Stage[main]/Pe_mcollective::Shared_key_files/File[mcollective-public.pem]/ensure"
+      time: $date $time
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/shared_key_files.pp
+      line: 44
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - mcollective-cert.pem
+        - pe_mco_server
+        - class
+        - "pe_mcollective::shared_key_files"
+        - pe_mcollective
+        - shared_key_files
+        - "pe_mcollective::server"
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}a735eb7e3ddf5f86ab77b1c9c366285f'"
+      source: "/Stage[main]/Pe_mcollective::Shared_key_files/File[mcollective-cert.pem]/ensure"
+      time: $date $time
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/shared_key_files.pp
+      line: 57
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - peadmin-public.pem
+        - pe_mco_server
+        - class
+        - "pe_mcollective::shared_key_files"
+        - pe_mcollective
+        - shared_key_files
+        - "pe_mcollective::server"
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}9c7314feb73e0d04f6063c093022e3ec'"
+      source: "/Stage[main]/Pe_mcollective::Shared_key_files/File[peadmin-public.pem]/ensure"
+      time: $date $time
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/shared_key_files.pp
+      line: 71
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - puppet-dashboard-public.pem
+        - pe_mco_server
+        - class
+        - "pe_mcollective::shared_key_files"
+        - pe_mcollective
+        - shared_key_files
+        - "pe_mcollective::server"
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "defined content as '{md5}c2d74da622961a21d484d8f59dbb5d5a'"
+      source: "/Stage[main]/Pe_mcollective::Shared_key_files/File[puppet-dashboard-public.pem]/ensure"
+      time: $date $time
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/shared_key_files.pp
+      line: 77
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - service
+        - pe-mcollective
+        - class
+        - "pe_mcollective::server"
+        - pe_mcollective
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      message: "Triggered 'refresh' from 9 events"
+      source: "/Stage[main]/Pe_mcollective::Server/Service[pe-mcollective]"
+      time: $date $time
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/server.pp
+      line: 75
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - class
+        - "profile::app::jenkins"
+        - profile
+        - app
+        - jenkins
+        - node
+        - $server
+      message: created
+      source: "/Stage[main]/Profile::App::Jenkins/File[/usr/share/tomcat6/.jenkins]/ensure"
+      time: $date $time
+      file: /etc/puppetlabs/puppet/environments/production/modules/profile/manifests/app/jenkins.pp
+      line: 22
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - "staging::file"
+        - staging
+        - jenkins-unspecified.war
+        - "staging::deploy"
+        - deploy
+        - "tomcat::war"
+        - tomcat
+        - war
+        - jenkins
+        - class
+        - "profile::app::jenkins"
+        - profile
+        - app
+        - node
+        - $server
+      message: created
+      source: "/Stage[main]/Profile::App::Jenkins/Tomcat::War[jenkins]/Staging::Deploy[jenkins-unspecified.war]/Staging::File[jenkins-unspecified.war]/File[/var/staging/tomcat]/ensure"
+      time: $date $time
+      file: /etc/puppetlabs/puppet/environments/production/modules/staging/manifests/file.pp
+      line: 37
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - exec
+        - "staging::file"
+        - staging
+        - file
+        - jenkins-unspecified.war
+        - "staging::deploy"
+        - deploy
+        - "tomcat::war"
+        - tomcat
+        - war
+        - jenkins
+        - class
+        - "profile::app::jenkins"
+        - profile
+        - app
+        - node
+        - $server
+      message: "executed successfully"
+      source: "/Stage[main]/Profile::App::Jenkins/Tomcat::War[jenkins]/Staging::Deploy[jenkins-unspecified.war]/Staging::File[jenkins-unspecified.war]/Exec[/var/staging/tomcat/jenkins-unspecified.war]/returns"
+      time: $date $time
+      file: /etc/puppetlabs/puppet/environments/production/modules/staging/manifests/file.pp
+      line: 85
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - exec
+        - purge_tomcat_war_jenkins
+        - "tomcat::war"
+        - tomcat
+        - war
+        - jenkins
+        - class
+        - "profile::app::jenkins"
+        - profile
+        - app
+        - node
+        - $server
+      message: "Triggered 'refresh' from 1 events"
+      source: "/Stage[main]/Profile::App::Jenkins/Tomcat::War[jenkins]/Exec[purge_tomcat_war_jenkins]"
+      time: $date $time
+      file: /etc/puppetlabs/puppet/environments/production/modules/tomcat/manifests/war.pp
+      line: 61
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - "tomcat::war"
+        - tomcat
+        - war
+        - jenkins
+        - class
+        - "profile::app::jenkins"
+        - profile
+        - app
+        - node
+        - $server
+      message: created
+      source: "/Stage[main]/Profile::App::Jenkins/Tomcat::War[jenkins]/File[/var/lib/tomcat6/staging/jenkins-unspecified.war.d]/ensure"
+      time: $date $time
+      file: /etc/puppetlabs/puppet/environments/production/modules/tomcat/manifests/war.pp
+      line: 39
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - exec
+        - "staging::extract"
+        - staging
+        - extract
+        - jenkins-unspecified.war
+        - "staging::deploy"
+        - deploy
+        - "tomcat::war"
+        - tomcat
+        - war
+        - jenkins
+        - class
+        - "profile::app::jenkins"
+        - profile
+        - app
+        - node
+        - $server
+      message: "executed successfully"
+      source: "/Stage[main]/Profile::App::Jenkins/Tomcat::War[jenkins]/Staging::Deploy[jenkins-unspecified.war]/Staging::Extract[jenkins-unspecified.war]/Exec[extract jenkins-unspecified.war]/returns"
+      time: $date $time
+      file: /etc/puppetlabs/puppet/environments/production/modules/staging/manifests/extract.pp
+      line: 89
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - file
+        - "tomcat::war"
+        - tomcat
+        - war
+        - jenkins
+        - class
+        - "profile::app::jenkins"
+        - profile
+        - app
+        - node
+        - $server
+      message: created
+      source: "/Stage[main]/Profile::App::Jenkins/Tomcat::War[jenkins]/File[/var/lib/tomcat6/webapps/jenkins]/ensure"
+      time: $date $time
+      file: /etc/puppetlabs/puppet/environments/production/modules/tomcat/manifests/war.pp
+      line: 69
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+        - service
+        - tomcat
+        - class
+        - "profile::tomcat"
+        - profile
+        - node
+        - $server
+      message: "ensure changed 'stopped' to 'running'"
+      source: /Stage[main]/Tomcat/Service[tomcat]/ensure
+      time: $date $time
+      file: /etc/puppetlabs/puppet/environments/production/modules/tomcat/manifests/init.pp
+      line: 17
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+      message: "Finished catalog run in 180.07 seconds"
+      source: Puppet
+      time: $date $time
+  resource_statuses: 
+    Schedule[daily]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[daily]
+      file: 
+      line: 
+      evaluation_time: 5.1e-08
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - daily
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: daily
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[daily]
+    Schedule[monthly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[monthly]
+      file: 
+      line: 
+      evaluation_time: 8.41e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - monthly
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: monthly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[monthly]
+    Schedule[hourly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[hourly]
+      file: 
+      line: 
+      evaluation_time: 7.6587e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - hourly
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: hourly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[hourly]
+    Schedule[never]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[never]
+      file: 
+      line: 
+      evaluation_time: 7.588e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - never
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: never
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[never]
+    Package[iptables]: !ruby/object:Puppet::Resource::Status
+      resource: Package[iptables]
+      file: /opt/puppet/share/puppet/modules/firewall/manifests/linux.pp
+      line: 11
+      evaluation_time: 0.000346801
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - package
+        - iptables
+        - class
+        - "firewall::linux"
+        - firewall
+        - linux
+        - "profile::firewall"
+        - profile
+        - "profile::tomcat"
+        - tomcat
+        - node
+        - $server
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Package
+      title: iptables
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[setup]
+        - "Firewall::Linux"
+        - Package[iptables]
+    Service[iptables]: !ruby/object:Puppet::Resource::Status
+      resource: Service[iptables]
+      file: /opt/puppet/share/puppet/modules/firewall/manifests/linux/redhat.pp
+      line: 8
+      evaluation_time: 0.149815406
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - service
+        - iptables
+        - class
+        - "firewall::linux::redhat"
+        - firewall
+        - linux
+        - redhat
+        - "firewall::linux"
+        - "profile::firewall"
+        - profile
+        - "profile::tomcat"
+        - tomcat
+        - node
+        - $server
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Service
+      title: iptables
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[setup]
+        - "Firewall::Linux::Redhat"
+        - Service[iptables]
+    Filebucket[puppet]: !ruby/object:Puppet::Resource::Status
+      resource: Filebucket[puppet]
+      file: 
+      line: 
+      evaluation_time: 1.6611e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - filebucket
+        - puppet
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Filebucket
+      title: puppet
+      skipped: false
+      failed: false
+      containment_path: 
+        - Filebucket[puppet]
+    Schedule[weekly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[weekly]
+      file: 
+      line: 
+      evaluation_time: 0.000204144
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - weekly
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: weekly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[weekly]
+    "Firewall[000 accept all icmp]": !ruby/object:Puppet::Resource::Status
+      resource: "Firewall[000 accept all icmp]"
+      file: /etc/puppetlabs/puppet/environments/production/modules/profile/manifests/firewall/pre.pp
+      line: 12
+      evaluation_time: 0.164110132
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - firewall
+        - class
+        - "profile::firewall::pre"
+        - profile
+        - pre
+        - "profile::firewall"
+        - "profile::tomcat"
+        - tomcat
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: present
+          historical_value: 
+          message: created
+          name: !ruby/sym firewall_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: Firewall
+      title: "000 accept all icmp"
+      skipped: false
+      failed: false
+      containment_path: 
+        - "Firewall[000 accept all icmp]"
+    "Firewall[001 accept all to lo interface]": !ruby/object:Puppet::Resource::Status
+      resource: "Firewall[001 accept all to lo interface]"
+      file: /etc/puppetlabs/puppet/environments/production/modules/profile/manifests/firewall/pre.pp
+      line: 17
+      evaluation_time: 0.139054814
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - firewall
+        - class
+        - "profile::firewall::pre"
+        - profile
+        - pre
+        - "profile::firewall"
+        - "profile::tomcat"
+        - tomcat
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: present
+          historical_value: 
+          message: created
+          name: !ruby/sym firewall_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: Firewall
+      title: "001 accept all to lo interface"
+      skipped: false
+      failed: false
+      containment_path: 
+        - "Firewall[001 accept all to lo interface]"
+    "Firewall[002 accept related established rules]": !ruby/object:Puppet::Resource::Status
+      resource: "Firewall[002 accept related established rules]"
+      file: /etc/puppetlabs/puppet/environments/production/modules/profile/manifests/firewall/pre.pp
+      line: 22
+      evaluation_time: 0.172129559
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - firewall
+        - class
+        - "profile::firewall::pre"
+        - profile
+        - pre
+        - "profile::firewall"
+        - "profile::tomcat"
+        - tomcat
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: present
+          historical_value: 
+          message: created
+          name: !ruby/sym firewall_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: Firewall
+      title: "002 accept related established rules"
+      skipped: false
+      failed: false
+      containment_path: 
+        - "Firewall[002 accept related established rules]"
+    "Firewall[100 allow connections to tomcat]": !ruby/object:Puppet::Resource::Status
+      resource: "Firewall[100 allow connections to tomcat]"
+      file: /etc/puppetlabs/puppet/environments/production/modules/profile/manifests/tomcat.pp
+      line: 19
+      evaluation_time: 0.313472185
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - firewall
+        - class
+        - "profile::tomcat"
+        - profile
+        - tomcat
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: present
+          historical_value: 
+          message: created
+          name: !ruby/sym firewall_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: Firewall
+      title: "100 allow connections to tomcat"
+      skipped: false
+      failed: false
+      containment_path: 
+        - "Firewall[100 allow connections to tomcat]"
+    File[/opt/puppet/sbin/refresh-mcollective-metadata]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/sbin/refresh-mcollective-metadata]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/server.pp
+      line: 107
+      evaluation_time: 0.001770097
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server"
+        - pe_mcollective
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}b816be63b8fa63a8dc0d8be2f6c90c38'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/sbin/refresh-mcollective-metadata
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server"
+        - File[/opt/puppet/sbin/refresh-mcollective-metadata]
+    Cron[pe-mcollective-metadata]: !ruby/object:Puppet::Resource::Status
+      resource: Cron[pe-mcollective-metadata]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/server.pp
+      line: 112
+      evaluation_time: 0.00542476
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - cron
+        - pe-mcollective-metadata
+        - class
+        - "pe_mcollective::server"
+        - pe_mcollective
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: present
+          historical_value: 
+          message: created
+          name: !ruby/sym cron_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: Cron
+      title: pe-mcollective-metadata
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server"
+        - Cron[pe-mcollective-metadata]
+    File[/opt/puppet/libexec/mcollective/mcollective]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/server/plugins.pp
+      line: 41
+      evaluation_time: 0.00062679
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective]
+    File[/opt/puppet/libexec/mcollective/mcollective/data]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/data]
+      file: 
+      line: 
+      evaluation_time: 0.000384181
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/data
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/data]
+    File[/opt/puppet/libexec/mcollective/mcollective/data/resource_data.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/data/resource_data.rb]
+      file: 
+      line: 
+      evaluation_time: 0.039246689
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}41e785704e01cfab6a6c88ebd921bbb9'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/data/resource_data.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/data/resource_data.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/security]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/security]
+      file: 
+      line: 
+      evaluation_time: 0.001058144
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/security
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/security]
+    File[/opt/puppet/libexec/mcollective/mcollective/security/sshkey.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/security/sshkey.rb]
+      file: 
+      line: 
+      evaluation_time: 0.038254624
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}8fa3e9125fd917948445e3d2621d40e5'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/security/sshkey.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/security/sshkey.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/application]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/application]
+      file: 
+      line: 
+      evaluation_time: 0.001942656
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: directory
+          historical_value: 
+          message: created
+          name: !ruby/sym directory_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/application
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/application]
+    File[/opt/puppet/libexec/mcollective/mcollective/application/package.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/application/package.rb]
+      file: 
+      line: 
+      evaluation_time: 0.039145361
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}afcd9a561b087049eccb648a940b592e'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/application/package.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/application/package.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/application/service.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/application/service.rb]
+      file: 
+      line: 
+      evaluation_time: 0.038291085
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}799681457f0f707a7166da086f97e473'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/application/service.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/application/service.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/validator]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/validator]
+      file: 
+      line: 
+      evaluation_time: 0.000480625
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/validator
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/validator]
+    File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_tags_validator.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_tags_validator.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.04154313
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}7ed95b2e5b210db83d12d5034f1ecb0f'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/validator/puppet_tags_validator.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_tags_validator.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_server_address_validator.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_server_address_validator.rb]
+      file: 
+      line: 
+      evaluation_time: 0.03711875
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}9824a78753512eaecb65a95e93cd874b'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/validator/puppet_server_address_validator.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_server_address_validator.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_resource_validator.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_resource_validator.rb]
+      file: 
+      line: 
+      evaluation_time: 0.041523438
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}567c7dc4d70ed0db7fd2626c77f6df41'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/validator/puppet_resource_validator.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_resource_validator.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_variable_validator.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_variable_validator.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.037378163
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}58c9db4ca4503e4d692a016743e01627'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/validator/puppet_variable_validator.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_variable_validator.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/validator/service_name.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/validator/service_name.rb]
+      file: 
+      line: 
+      evaluation_time: 0.038386154
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}3f501a9ed252ce2dfe06a2e1e53845ab'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/validator/service_name.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/validator/service_name.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/validator/service_name.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/validator/service_name.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.059158615
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}2812afa15108103042f706c2201e286b'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/validator/service_name.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/validator/service_name.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_variable_validator.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_variable_validator.rb]
+      file: 
+      line: 
+      evaluation_time: 0.039029836
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}3cbca3af2e5884f2a807ef005a87151b'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/validator/puppet_variable_validator.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_variable_validator.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_server_address_validator.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_server_address_validator.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.037394246
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}323e0b9647639fdf32cfbc63a82860f7'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/validator/puppet_server_address_validator.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_server_address_validator.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/data/puppet_data.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/data/puppet_data.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.038068259
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}5c9912bf5ae5dbc8762109a40c027c63'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/data/puppet_data.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/data/puppet_data.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/registration]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/registration]
+      file: 
+      line: 
+      evaluation_time: 0.000383991
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/registration
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/registration]
+    File[/opt/puppet/libexec/mcollective/mcollective/registration/meta.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/registration/meta.rb]
+      file: 
+      line: 
+      evaluation_time: 0.037811467
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}e939958bbbc0817e1779c336037e1849'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/registration/meta.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/registration/meta.rb]
+    Filebucket[main]: !ruby/object:Puppet::Resource::Status
+      resource: Filebucket[main]
+      file: /etc/puppetlabs/puppet/environments/production/manifests/site.pp
+      line: 24
+      evaluation_time: 7.832e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - filebucket
+        - main
+        - class
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Filebucket
+      title: main
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - ""
+        - Filebucket[main]
+    File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_resource_validator.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_resource_validator.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.038459552
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}3e45a28e1ba6c8d22ce40934c04b30b4'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/validator/puppet_resource_validator.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_resource_validator.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/application/puppet.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/application/puppet.rb]
+      file: 
+      line: 
+      evaluation_time: 0.037806519
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}3037b1f9a29fba97bd1196186997aba6'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/application/puppet.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/application/puppet.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/data/service_data.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/data/service_data.rb]
+      file: 
+      line: 
+      evaluation_time: 0.040006662
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}bc651898c7dcd373d609c933fbd6021f'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/data/service_data.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/data/service_data.rb]
+    Resources[firewall]: !ruby/object:Puppet::Resource::Status
+      resource: Resources[firewall]
+      file: /etc/puppetlabs/puppet/environments/production/modules/profile/manifests/firewall.pp
+      line: 31
+      evaluation_time: 0.000148022
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - resources
+        - firewall
+        - class
+        - "profile::firewall"
+        - profile
+        - "profile::tomcat"
+        - tomcat
+        - node
+        - $server
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Resources
+      title: firewall
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Profile::Firewall"
+        - Resources[firewall]
+    "Firewall[9004 dc0f1adfee77aa04ef7fdf348860a701]": !ruby/object:Puppet::Resource::Status
+      resource: "Firewall[9004 dc0f1adfee77aa04ef7fdf348860a701]"
+      file: 
+      line: 
+      evaluation_time: 0.172017894
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - firewall
+        - resources
+        - class
+        - "profile::firewall"
+        - profile
+        - "profile::tomcat"
+        - tomcat
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: present
+          desired_value: absent
+          historical_value: 
+          message: removed
+          name: !ruby/sym firewall_removed
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: Firewall
+      title: "9004 dc0f1adfee77aa04ef7fdf348860a701"
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Profile::Firewall"
+        - "Firewall[9004 dc0f1adfee77aa04ef7fdf348860a701]"
+    "Firewall[9001 fe701ab7ca74bd49f13b9f0ab39f3254]": !ruby/object:Puppet::Resource::Status
+      resource: "Firewall[9001 fe701ab7ca74bd49f13b9f0ab39f3254]"
+      file: 
+      line: 
+      evaluation_time: 0.168803458
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - firewall
+        - resources
+        - class
+        - "profile::firewall"
+        - profile
+        - "profile::tomcat"
+        - tomcat
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: present
+          desired_value: absent
+          historical_value: 
+          message: removed
+          name: !ruby/sym firewall_removed
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: Firewall
+      title: "9001 fe701ab7ca74bd49f13b9f0ab39f3254"
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Profile::Firewall"
+        - "Firewall[9001 fe701ab7ca74bd49f13b9f0ab39f3254]"
+    "Firewall[9006 9c205c1da32aab86e155ff77334c5fc8]": !ruby/object:Puppet::Resource::Status
+      resource: "Firewall[9006 9c205c1da32aab86e155ff77334c5fc8]"
+      file: 
+      line: 
+      evaluation_time: 0.165393315
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - firewall
+        - resources
+        - class
+        - "profile::firewall"
+        - profile
+        - "profile::tomcat"
+        - tomcat
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: present
+          desired_value: absent
+          historical_value: 
+          message: removed
+          name: !ruby/sym firewall_removed
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: Firewall
+      title: "9006 9c205c1da32aab86e155ff77334c5fc8"
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Profile::Firewall"
+        - "Firewall[9006 9c205c1da32aab86e155ff77334c5fc8]"
+    "Firewall[9002 a627067f779aaa7406fa9062efa4550e]": !ruby/object:Puppet::Resource::Status
+      resource: "Firewall[9002 a627067f779aaa7406fa9062efa4550e]"
+      file: 
+      line: 
+      evaluation_time: 0.161512493
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - firewall
+        - resources
+        - class
+        - "profile::firewall"
+        - profile
+        - "profile::tomcat"
+        - tomcat
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: present
+          desired_value: absent
+          historical_value: 
+          message: removed
+          name: !ruby/sym firewall_removed
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: Firewall
+      title: "9002 a627067f779aaa7406fa9062efa4550e"
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Profile::Firewall"
+        - "Firewall[9002 a627067f779aaa7406fa9062efa4550e]"
+    File[/var/staging]: !ruby/object:Puppet::Resource::Status
+      resource: File[/var/staging]
+      file: /etc/puppetlabs/puppet/environments/production/modules/staging/manifests/init.pp
+      line: 25
+      evaluation_time: 0.001526278
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - staging
+        - "profile::staging"
+        - profile
+        - "profile::app::jenkins"
+        - app
+        - jenkins
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: directory
+          historical_value: 
+          message: created
+          name: !ruby/sym directory_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /var/staging
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - Staging
+        - File[/var/staging]
+    File[/opt/puppet/libexec/mcollective/mcollective/agent]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/agent]
+      file: 
+      line: 
+      evaluation_time: 0.000382301
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/agent
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/agent]
+    File[/opt/puppet/libexec/mcollective/mcollective/agent/puppet.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/agent/puppet.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.039752734
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}a91fe7c5346acc72cbfbbda1a30a9186'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/agent/puppet.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/agent/puppet.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/agent/package.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/agent/package.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.039829461
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}91071e5a4c437b889be3013663e6400f'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/agent/package.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/agent/package.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetral.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetral.rb]
+      file: 
+      line: 
+      evaluation_time: 0.065743435
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}5bc9d72845574a3fc08c9062b4b28dd3'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/agent/puppetral.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetral.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/agent/service.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/agent/service.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.039124608
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}59ab37f55d8e16fda6a2103682545934'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/agent/service.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/agent/service.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetral.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetral.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.039626018
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}7f06f13953847e60818a681c1f2f168b'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/agent/puppetral.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetral.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/agent/service.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/agent/service.rb]
+      file: 
+      line: 
+      evaluation_time: 0.039264812
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}cbf84ed615eeda9789650b05ec504566'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/agent/service.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/agent/service.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/agent/package.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/agent/package.rb]
+      file: 
+      line: 
+      evaluation_time: 0.038225848
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}a069c5ae29e1b2f3a8fe2bb9a10f32ca'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/agent/package.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/agent/package.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/agent/puppet.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/agent/puppet.rb]
+      file: 
+      line: 
+      evaluation_time: 0.039676427
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}d720f6de212c1f1b03603aed52d9d656'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/agent/puppet.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/agent/puppet.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_tags_validator.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_tags_validator.rb]
+      file: 
+      line: 
+      evaluation_time: 0.039243341
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}40b29498e867ba2ecf21dc08bc457d4e'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/validator/puppet_tags_validator.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/validator/puppet_tags_validator.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/data/service_data.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/data/service_data.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.039734789
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}e7f7e0bc65ede56fc636505a400b1700'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/data/service_data.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/data/service_data.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/data/resource_data.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/data/resource_data.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.24441101
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}c4e3a46fd3c0b5d3990db0b8af1c747f'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/data/resource_data.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/data/resource_data.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/data/puppet_data.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/data/puppet_data.rb]
+      file: 
+      line: 
+      evaluation_time: 0.040164786
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}021d22f47251cd3027ba1777e3503d72'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/data/puppet_data.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/data/puppet_data.rb]
+    Package[tomcat6-admin-webapps]: !ruby/object:Puppet::Resource::Status
+      resource: Package[tomcat6-admin-webapps]
+      file: /etc/puppetlabs/puppet/environments/production/modules/tomcat/manifests/app/admin.pp
+      line: 7
+      evaluation_time: 100.999113217
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - package
+        - tomcat6-admin-webapps
+        - class
+        - "tomcat::app::admin"
+        - tomcat
+        - app
+        - admin
+        - "profile::tomcat"
+        - profile
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: present
+          historical_value: 
+          message: created
+          name: !ruby/sym package_installed
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: Package
+      title: tomcat6-admin-webapps
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Tomcat::App::Admin"
+        - Package[tomcat6-admin-webapps]
+    Package[tomcat6-webapps]: !ruby/object:Puppet::Resource::Status
+      resource: Package[tomcat6-webapps]
+      file: /etc/puppetlabs/puppet/environments/production/modules/tomcat/manifests/app/admin.pp
+      line: 7
+      evaluation_time: 9.777437243
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - package
+        - tomcat6-webapps
+        - class
+        - "tomcat::app::admin"
+        - tomcat
+        - app
+        - admin
+        - "profile::tomcat"
+        - profile
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: present
+          historical_value: 
+          message: created
+          name: !ruby/sym package_installed
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: Package
+      title: tomcat6-webapps
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Tomcat::App::Admin"
+        - Package[tomcat6-webapps]
+    "Anchor[java::begin:]": !ruby/object:Puppet::Resource::Status
+      resource: "Anchor[java::begin:]"
+      file: /etc/puppetlabs/puppet/environments/production/modules/java/manifests/init.pp
+      line: 84
+      evaluation_time: 0.000259954
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - anchor
+        - "java::begin:"
+        - java
+        - "begin:"
+        - class
+        - tomcat
+        - "profile::tomcat"
+        - profile
+        - node
+        - $server
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Anchor
+      title: "java::begin:"
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - Java
+        - "Anchor[java::begin:]"
+    Package[java]: !ruby/object:Puppet::Resource::Status
+      resource: Package[java]
+      file: /etc/puppetlabs/puppet/environments/production/modules/java/manifests/init.pp
+      line: 89
+      evaluation_time: 30.525723566
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - package
+        - java
+        - class
+        - tomcat
+        - "profile::tomcat"
+        - profile
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: present
+          historical_value: 
+          message: created
+          name: !ruby/sym package_installed
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: Package
+      title: java
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - Java
+        - Package[java]
+    Package[tomcat6-docs-webapp]: !ruby/object:Puppet::Resource::Status
+      resource: Package[tomcat6-docs-webapp]
+      file: /etc/puppetlabs/puppet/environments/production/modules/tomcat/manifests/app/docs.pp
+      line: 7
+      evaluation_time: 6.668254125
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - package
+        - tomcat6-docs-webapp
+        - class
+        - "tomcat::app::docs"
+        - tomcat
+        - app
+        - docs
+        - "profile::tomcat"
+        - profile
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: present
+          historical_value: 
+          message: created
+          name: !ruby/sym package_installed
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: Package
+      title: tomcat6-docs-webapp
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Tomcat::App::Docs"
+        - Package[tomcat6-docs-webapp]
+    Package[tomcat]: !ruby/object:Puppet::Resource::Status
+      resource: Package[tomcat]
+      file: /etc/puppetlabs/puppet/environments/production/modules/tomcat/manifests/init.pp
+      line: 11
+      evaluation_time: 0.081438505
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - package
+        - tomcat
+        - class
+        - "profile::tomcat"
+        - profile
+        - node
+        - $server
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Package
+      title: tomcat
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - Tomcat
+        - Package[tomcat]
+    File[/var/lib/tomcat6/staging]: !ruby/object:Puppet::Resource::Status
+      resource: File[/var/lib/tomcat6/staging]
+      file: /etc/puppetlabs/puppet/environments/production/modules/tomcat/manifests/init.pp
+      line: 24
+      evaluation_time: 0.001036726
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - tomcat
+        - "profile::tomcat"
+        - profile
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: directory
+          historical_value: 
+          message: created
+          name: !ruby/sym directory_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /var/lib/tomcat6/staging
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - Tomcat
+        - File[/var/lib/tomcat6/staging]
+    "Firewall[9003 49bcd611c61bdd18b235cea46ef04fae]": !ruby/object:Puppet::Resource::Status
+      resource: "Firewall[9003 49bcd611c61bdd18b235cea46ef04fae]"
+      file: 
+      line: 
+      evaluation_time: 0.286713879
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - firewall
+        - resources
+        - class
+        - "profile::firewall"
+        - profile
+        - "profile::tomcat"
+        - tomcat
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: present
+          desired_value: absent
+          historical_value: 
+          message: removed
+          name: !ruby/sym firewall_removed
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: Firewall
+      title: "9003 49bcd611c61bdd18b235cea46ef04fae"
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Profile::Firewall"
+        - "Firewall[9003 49bcd611c61bdd18b235cea46ef04fae]"
+    "Anchor[java::end]": !ruby/object:Puppet::Resource::Status
+      resource: "Anchor[java::end]"
+      file: /etc/puppetlabs/puppet/environments/production/modules/java/manifests/init.pp
+      line: 92
+      evaluation_time: 0.00021934
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - anchor
+        - "java::end"
+        - java
+        - end
+        - class
+        - tomcat
+        - "profile::tomcat"
+        - profile
+        - node
+        - $server
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Anchor
+      title: "java::end"
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - Java
+        - "Anchor[java::end]"
+    File[/opt/puppet/libexec/mcollective/mcollective/util]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util]
+      file: 
+      line: 
+      evaluation_time: 0.005469149
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: directory
+          historical_value: 
+          message: created
+          name: !ruby/sym directory_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/package]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/package]
+      file: 
+      line: 
+      evaluation_time: 0.001035386
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: directory
+          historical_value: 
+          message: created
+          name: !ruby/sym directory_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/package
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/package]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr.rb]
+      file: 
+      line: 
+      evaluation_time: 0.195577449
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}04efaa640da811eb6c85eba52d55a634'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr]
+      file: 
+      line: 
+      evaluation_time: 0.001384556
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: directory
+          historical_value: 
+          message: created
+          name: !ruby/sym directory_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2]
+      file: 
+      line: 
+      evaluation_time: 0.001078011
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: directory
+          historical_value: 
+          message: created
+          name: !ruby/sym directory_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/unix.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/unix.rb]
+      file: 
+      line: 
+      evaluation_time: 0.040932565
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}7fb044bc9976103bbbee1190ba5d8f87'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/unix.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/unix.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/windows.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/windows.rb]
+      file: 
+      line: 
+      evaluation_time: 0.037949655
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}3f9d91026b11241a53bd4120d86fc625'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/windows.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/windows.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/actionpolicy.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/actionpolicy.rb]
+      file: 
+      line: 
+      evaluation_time: 0.04001631
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}e4d6a7024ad7b28e019e7b9931eac027'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/actionpolicy.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/actionpolicy.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/package/packagehelpers.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/package/packagehelpers.rb]
+      file: 
+      line: 
+      evaluation_time: 0.039139202
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}af83db4ea2647516e50358df4166e571'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/package/packagehelpers.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/package/packagehelpers.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3]
+      file: 
+      line: 
+      evaluation_time: 0.001269936
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: directory
+          historical_value: 
+          message: created
+          name: !ruby/sym directory_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/unix.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/unix.rb]
+      file: 
+      line: 
+      evaluation_time: 0.03930489
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}ad1047da94aa0cba329f709433e424ef'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/unix.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/unix.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/manager.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/manager.rb]
+      file: 
+      line: 
+      evaluation_time: 0.038404689
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}c59cc70c811ea2d373a9b8cf6ac3234a'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/manager.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/manager.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/manager.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/manager.rb]
+      file: 
+      line: 
+      evaluation_time: 0.038943306
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}4b382b289182cf86161ecfde337b0229'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/manager.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v2/manager.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/puppetrunner.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/puppetrunner.rb]
+      file: 
+      line: 
+      evaluation_time: 0.039322902
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}9754554827cb37b768c63beac35da49b'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/puppetrunner.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/puppetrunner.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/windows.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/windows.rb]
+      file: 
+      line: 
+      evaluation_time: 0.041603243
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}5ec3972e4c68c0479a7ecb5186677166'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/windows.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/v3/windows.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/package/base.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/package/base.rb]
+      file: 
+      line: 
+      evaluation_time: 0.038395051
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}1bdb7e7a6dcfea6fd2a06c5dc39b7276'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/package/base.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/package/base.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/common.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/common.rb]
+      file: 
+      line: 
+      evaluation_time: 0.040013966
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}9812103e96f86be5cbe585bcf0cfc5cf'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/common.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/puppet_agent_mgr/common.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/package/puppetpackage.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/package/puppetpackage.rb]
+      file: 
+      line: 
+      evaluation_time: 0.037792773
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}161b48fa538e0ddd0118ab09f9405c51'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/package/puppetpackage.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/package/puppetpackage.rb]
+    "Firewall[9005 32828795e9fcabe60ef2ca2c1d6ccf05]": !ruby/object:Puppet::Resource::Status
+      resource: "Firewall[9005 32828795e9fcabe60ef2ca2c1d6ccf05]"
+      file: 
+      line: 
+      evaluation_time: 0.077567421
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - firewall
+        - resources
+        - class
+        - "profile::firewall"
+        - profile
+        - "profile::tomcat"
+        - tomcat
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: present
+          desired_value: absent
+          historical_value: 
+          message: removed
+          name: !ruby/sym firewall_removed
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: Firewall
+      title: "9005 32828795e9fcabe60ef2ca2c1d6ccf05"
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Profile::Firewall"
+        - "Firewall[9005 32828795e9fcabe60ef2ca2c1d6ccf05]"
+    File[/opt/puppet/libexec/mcollective/mcollective/aggregate]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/aggregate]
+      file: 
+      line: 
+      evaluation_time: 0.002182593
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: directory
+          historical_value: 
+          message: created
+          name: !ruby/sym directory_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/aggregate
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/aggregate]
+    File[/opt/puppet/libexec/mcollective/mcollective/aggregate/boolean_summary.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/aggregate/boolean_summary.ddl]
+      file: 
+      line: 
+      evaluation_time: 0.040270391
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}aa581c71a6c7658bffdbaec81590f65d'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/aggregate/boolean_summary.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/aggregate/boolean_summary.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/aggregate/boolean_summary.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/aggregate/boolean_summary.rb]
+      file: 
+      line: 
+      evaluation_time: 0.039530052
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}0546063313508d8aff603be320af3c44'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/aggregate/boolean_summary.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/aggregate/boolean_summary.rb]
+    File[/etc/puppetlabs/mcollective/server.cfg]: !ruby/object:Puppet::Resource::Status
+      resource: File[/etc/puppetlabs/mcollective/server.cfg]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/server.pp
+      line: 69
+      evaluation_time: 0.059215042
+      change_count: 2
+      out_of_sync_count: 2
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server"
+        - pe_mcollective
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: content
+          previous_value: "{md5}a9c7335a83c5ac9f6a19bb195ea0c63e"
+          desired_value: "{md5}50968ab8582188d68b9180fd3a0d057d"
+          historical_value: 
+          message: "content changed '{md5}a9c7335a83c5ac9f6a19bb195ea0c63e' to '{md5}50968ab8582188d68b9180fd3a0d057d'"
+          name: !ruby/sym content_changed
+          status: success
+          time: $date $time
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: mode
+          previous_value: "640"
+          desired_value: "600"
+          historical_value: 
+          message: "mode changed '0640' to '0600'"
+          name: !ruby/sym mode_changed
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /etc/puppetlabs/mcollective/server.cfg
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server"
+        - File[/etc/puppetlabs/mcollective/server.cfg]
+    File[/var/lib/tomcat6/webapps]: !ruby/object:Puppet::Resource::Status
+      resource: File[/var/lib/tomcat6/webapps]
+      file: /etc/puppetlabs/puppet/environments/production/modules/tomcat/manifests/init.pp
+      line: 21
+      evaluation_time: 0.00097266
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - tomcat
+        - "profile::tomcat"
+        - profile
+        - node
+        - $server
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /var/lib/tomcat6/webapps
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - Tomcat
+        - File[/var/lib/tomcat6/webapps]
+    Schedule[puppet]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[puppet]
+      file: 
+      line: 
+      evaluation_time: 0.00019164
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - puppet
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: puppet
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[puppet]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/service]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/service]
+      file: 
+      line: 
+      evaluation_time: 0.00155639
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: directory
+          historical_value: 
+          message: created
+          name: !ruby/sym directory_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/service
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/service]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/service/base.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/service/base.rb]
+      file: 
+      line: 
+      evaluation_time: 0.038901688
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}abea7b8fadbf3425a7b68b49b9435ff6'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/service/base.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/service/base.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/util/service/puppetservice.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/util/service/puppetservice.rb]
+      file: 
+      line: 
+      evaluation_time: 0.040511079
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}905db93e1c06ad5a7154fa2f9199f31c'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/util/service/puppetservice.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/util/service/puppetservice.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetd.ddl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetd.ddl]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/server/plugins.pp
+      line: 45
+      evaluation_time: 0.000567007
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/agent/puppetd.ddl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetd.ddl]
+    File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetd.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetd.rb]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/server/plugins.pp
+      line: 43
+      evaluation_time: 0.000126769
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/agent/puppetd.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/agent/puppetd.rb]
+    File[/opt/puppet/libexec/mcollective/mcollective/application/puppetd.rb]: !ruby/object:Puppet::Resource::Status
+      resource: File[/opt/puppet/libexec/mcollective/mcollective/application/puppetd.rb]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/server/plugins.pp
+      line: 47
+      evaluation_time: 0.000849029
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server::plugins"
+        - pe_mcollective
+        - server
+        - plugins
+        - "pe_mcollective::server"
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /opt/puppet/libexec/mcollective/mcollective/application/puppetd.rb
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server::Plugins"
+        - File[/opt/puppet/libexec/mcollective/mcollective/application/puppetd.rb]
+    File[/etc/puppetlabs/mcollective/ssl]: !ruby/object:Puppet::Resource::Status
+      resource: File[/etc/puppetlabs/mcollective/ssl]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/shared_key_files.pp
+      line: 31
+      evaluation_time: 0.000187194
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - pe_mco_server
+        - class
+        - "pe_mcollective::shared_key_files"
+        - pe_mcollective
+        - shared_key_files
+        - "pe_mcollective::server"
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /etc/puppetlabs/mcollective/ssl
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Shared_key_files"
+        - File[/etc/puppetlabs/mcollective/ssl]
+    File[mcollective-private.pem]: !ruby/object:Puppet::Resource::Status
+      resource: File[mcollective-private.pem]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/shared_key_files.pp
+      line: 51
+      evaluation_time: 0.001822874
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - mcollective-private.pem
+        - pe_mco_server
+        - class
+        - "pe_mcollective::shared_key_files"
+        - pe_mcollective
+        - shared_key_files
+        - "pe_mcollective::server"
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}6c658e7bcdb66c4ccdc9fab3de7d5e87'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: mcollective-private.pem
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Shared_key_files"
+        - File[mcollective-private.pem]
+    File[mcollective-cacert.pem]: !ruby/object:Puppet::Resource::Status
+      resource: File[mcollective-cacert.pem]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/shared_key_files.pp
+      line: 63
+      evaluation_time: 0.000908455
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - mcollective-cacert.pem
+        - pe_mco_server
+        - class
+        - "pe_mcollective::shared_key_files"
+        - pe_mcollective
+        - shared_key_files
+        - "pe_mcollective::server"
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}ecca77abacb49454cbad89ecafa42c4f'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: mcollective-cacert.pem
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Shared_key_files"
+        - File[mcollective-cacert.pem]
+    File[mcollective-public.pem]: !ruby/object:Puppet::Resource::Status
+      resource: File[mcollective-public.pem]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/shared_key_files.pp
+      line: 44
+      evaluation_time: 0.001042259
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - mcollective-public.pem
+        - pe_mco_server
+        - class
+        - "pe_mcollective::shared_key_files"
+        - pe_mcollective
+        - shared_key_files
+        - "pe_mcollective::server"
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}3cd7cd2c1056054fcedf88e011f8a20b'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: mcollective-public.pem
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Shared_key_files"
+        - File[mcollective-public.pem]
+    File[mcollective-cert.pem]: !ruby/object:Puppet::Resource::Status
+      resource: File[mcollective-cert.pem]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/shared_key_files.pp
+      line: 57
+      evaluation_time: 0.001002549
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - mcollective-cert.pem
+        - pe_mco_server
+        - class
+        - "pe_mcollective::shared_key_files"
+        - pe_mcollective
+        - shared_key_files
+        - "pe_mcollective::server"
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}a735eb7e3ddf5f86ab77b1c9c366285f'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: mcollective-cert.pem
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Shared_key_files"
+        - File[mcollective-cert.pem]
+    File[/etc/puppetlabs/mcollective/ssl/clients]: !ruby/object:Puppet::Resource::Status
+      resource: File[/etc/puppetlabs/mcollective/ssl/clients]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/shared_key_files.pp
+      line: 36
+      evaluation_time: 0.000273791
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - pe_mco_server
+        - class
+        - "pe_mcollective::shared_key_files"
+        - pe_mcollective
+        - shared_key_files
+        - "pe_mcollective::server"
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /etc/puppetlabs/mcollective/ssl/clients
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Shared_key_files"
+        - File[/etc/puppetlabs/mcollective/ssl/clients]
+    File[peadmin-public.pem]: !ruby/object:Puppet::Resource::Status
+      resource: File[peadmin-public.pem]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/shared_key_files.pp
+      line: 71
+      evaluation_time: 0.001468784
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - peadmin-public.pem
+        - pe_mco_server
+        - class
+        - "pe_mcollective::shared_key_files"
+        - pe_mcollective
+        - shared_key_files
+        - "pe_mcollective::server"
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}9c7314feb73e0d04f6063c093022e3ec'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: peadmin-public.pem
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Shared_key_files"
+        - File[peadmin-public.pem]
+    File[/etc/puppetlabs/mcollective/ssl/clients/mcollective-public.pem]: !ruby/object:Puppet::Resource::Status
+      resource: File[/etc/puppetlabs/mcollective/ssl/clients/mcollective-public.pem]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/server.pp
+      line: 43
+      evaluation_time: 0.000766119
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - file
+        - class
+        - "pe_mcollective::server"
+        - pe_mcollective
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: File
+      title: /etc/puppetlabs/mcollective/ssl/clients/mcollective-public.pem
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server"
+        - File[/etc/puppetlabs/mcollective/ssl/clients/mcollective-public.pem]
+    File[puppet-dashboard-public.pem]: !ruby/object:Puppet::Resource::Status
+      resource: File[puppet-dashboard-public.pem]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/shared_key_files.pp
+      line: 77
+      evaluation_time: 0.000985134
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - puppet-dashboard-public.pem
+        - pe_mco_server
+        - class
+        - "pe_mcollective::shared_key_files"
+        - pe_mcollective
+        - shared_key_files
+        - "pe_mcollective::server"
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: file
+          historical_value: 
+          message: "defined content as '{md5}c2d74da622961a21d484d8f59dbb5d5a'"
+          name: !ruby/sym file_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: puppet-dashboard-public.pem
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Shared_key_files"
+        - File[puppet-dashboard-public.pem]
+    Service[pe-mcollective]: !ruby/object:Puppet::Resource::Status
+      resource: Service[pe-mcollective]
+      file: /opt/puppet/share/puppet/modules/pe_mcollective/manifests/server.pp
+      line: 75
+      evaluation_time: 0.215906563
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - service
+        - pe-mcollective
+        - class
+        - "pe_mcollective::server"
+        - pe_mcollective
+        - server
+        - "pe_mcollective::role::agent"
+        - role
+        - agent
+        - node
+        - $server
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Service
+      title: pe-mcollective
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Pe_mcollective::Server"
+        - Service[pe-mcollective]
+    File[/usr/share/tomcat6/.jenkins]: !ruby/object:Puppet::Resource::Status
+      resource: File[/usr/share/tomcat6/.jenkins]
+      file: /etc/puppetlabs/puppet/environments/production/modules/profile/manifests/app/jenkins.pp
+      line: 22
+      evaluation_time: 0.00254397
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - class
+        - "profile::app::jenkins"
+        - profile
+        - app
+        - jenkins
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: directory
+          historical_value: 
+          message: created
+          name: !ruby/sym directory_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /usr/share/tomcat6/.jenkins
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Profile::App::Jenkins"
+        - File[/usr/share/tomcat6/.jenkins]
+    File[/var/staging/tomcat]: !ruby/object:Puppet::Resource::Status
+      resource: File[/var/staging/tomcat]
+      file: /etc/puppetlabs/puppet/environments/production/modules/staging/manifests/file.pp
+      line: 37
+      evaluation_time: 0.001538207
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - "staging::file"
+        - staging
+        - jenkins-unspecified.war
+        - "staging::deploy"
+        - deploy
+        - "tomcat::war"
+        - tomcat
+        - war
+        - jenkins
+        - class
+        - "profile::app::jenkins"
+        - profile
+        - app
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: directory
+          historical_value: 
+          message: created
+          name: !ruby/sym directory_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /var/staging/tomcat
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Profile::App::Jenkins"
+        - "Tomcat::War[jenkins]"
+        - "Staging::Deploy[jenkins-unspecified.war]"
+        - "Staging::File[jenkins-unspecified.war]"
+        - File[/var/staging/tomcat]
+    Exec[/var/staging/tomcat/jenkins-unspecified.war]: !ruby/object:Puppet::Resource::Status
+      resource: Exec[/var/staging/tomcat/jenkins-unspecified.war]
+      file: /etc/puppetlabs/puppet/environments/production/modules/staging/manifests/file.pp
+      line: 85
+      evaluation_time: 23.177148551
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - exec
+        - "staging::file"
+        - staging
+        - file
+        - jenkins-unspecified.war
+        - "staging::deploy"
+        - deploy
+        - "tomcat::war"
+        - tomcat
+        - war
+        - jenkins
+        - class
+        - "profile::app::jenkins"
+        - profile
+        - app
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: returns
+          previous_value: notrun
+          desired_value: 
+            - "0"
+          historical_value: 
+          message: "executed successfully"
+          name: !ruby/sym executed_command
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: Exec
+      title: /var/staging/tomcat/jenkins-unspecified.war
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Profile::App::Jenkins"
+        - "Tomcat::War[jenkins]"
+        - "Staging::Deploy[jenkins-unspecified.war]"
+        - "Staging::File[jenkins-unspecified.war]"
+        - Exec[/var/staging/tomcat/jenkins-unspecified.war]
+    Exec[purge_tomcat_war_jenkins]: !ruby/object:Puppet::Resource::Status
+      resource: Exec[purge_tomcat_war_jenkins]
+      file: /etc/puppetlabs/puppet/environments/production/modules/tomcat/manifests/war.pp
+      line: 61
+      evaluation_time: 0.000112069
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - exec
+        - purge_tomcat_war_jenkins
+        - "tomcat::war"
+        - tomcat
+        - war
+        - jenkins
+        - class
+        - "profile::app::jenkins"
+        - profile
+        - app
+        - node
+        - $server
+      time: $date $time
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Exec
+      title: purge_tomcat_war_jenkins
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Profile::App::Jenkins"
+        - "Tomcat::War[jenkins]"
+        - Exec[purge_tomcat_war_jenkins]
+    File[/var/lib/tomcat6/staging/jenkins-unspecified.war.d]: !ruby/object:Puppet::Resource::Status
+      resource: File[/var/lib/tomcat6/staging/jenkins-unspecified.war.d]
+      file: /etc/puppetlabs/puppet/environments/production/modules/tomcat/manifests/war.pp
+      line: 39
+      evaluation_time: 0.001252074
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - "tomcat::war"
+        - tomcat
+        - war
+        - jenkins
+        - class
+        - "profile::app::jenkins"
+        - profile
+        - app
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: directory
+          historical_value: 
+          message: created
+          name: !ruby/sym directory_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /var/lib/tomcat6/staging/jenkins-unspecified.war.d
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Profile::App::Jenkins"
+        - "Tomcat::War[jenkins]"
+        - File[/var/lib/tomcat6/staging/jenkins-unspecified.war.d]
+    "Exec[extract jenkins-unspecified.war]": !ruby/object:Puppet::Resource::Status
+      resource: "Exec[extract jenkins-unspecified.war]"
+      file: /etc/puppetlabs/puppet/environments/production/modules/staging/manifests/extract.pp
+      line: 89
+      evaluation_time: 0.842889954
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - exec
+        - "staging::extract"
+        - staging
+        - extract
+        - jenkins-unspecified.war
+        - "staging::deploy"
+        - deploy
+        - "tomcat::war"
+        - tomcat
+        - war
+        - jenkins
+        - class
+        - "profile::app::jenkins"
+        - profile
+        - app
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: returns
+          previous_value: notrun
+          desired_value: 
+            - "0"
+          historical_value: 
+          message: "executed successfully"
+          name: !ruby/sym executed_command
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: Exec
+      title: "extract jenkins-unspecified.war"
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Profile::App::Jenkins"
+        - "Tomcat::War[jenkins]"
+        - "Staging::Deploy[jenkins-unspecified.war]"
+        - "Staging::Extract[jenkins-unspecified.war]"
+        - "Exec[extract jenkins-unspecified.war]"
+    File[/var/lib/tomcat6/webapps/jenkins]: !ruby/object:Puppet::Resource::Status
+      resource: File[/var/lib/tomcat6/webapps/jenkins]
+      file: /etc/puppetlabs/puppet/environments/production/modules/tomcat/manifests/war.pp
+      line: 69
+      evaluation_time: 0.00138887
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - file
+        - "tomcat::war"
+        - tomcat
+        - war
+        - jenkins
+        - class
+        - "profile::app::jenkins"
+        - profile
+        - app
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: absent
+          desired_value: link
+          historical_value: 
+          message: created
+          name: !ruby/sym link_created
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: File
+      title: /var/lib/tomcat6/webapps/jenkins
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - "Profile::App::Jenkins"
+        - "Tomcat::War[jenkins]"
+        - File[/var/lib/tomcat6/webapps/jenkins]
+    Service[tomcat]: !ruby/object:Puppet::Resource::Status
+      resource: Service[tomcat]
+      file: /etc/puppetlabs/puppet/environments/production/modules/tomcat/manifests/init.pp
+      line: 17
+      evaluation_time: 0.816586625
+      change_count: 1
+      out_of_sync_count: 1
+      tags: 
+        - service
+        - tomcat
+        - class
+        - "profile::tomcat"
+        - profile
+        - node
+        - $server
+      time: $date $time
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: stopped
+          desired_value: running
+          historical_value: 
+          message: "ensure changed 'stopped' to 'running'"
+          name: !ruby/sym service_started
+          status: success
+          time: $date $time
+      out_of_sync: true
+      changed: true
+      resource_type: Service
+      title: tomcat
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - Tomcat
+        - Service[tomcat]
+  host: $server
+  time: $date $time
+  kind: apply
+  report_format: 4
+  puppet_version: "3.3.1 (Puppet Enterprise 3.1.0)"
+  configuration_version: 1388449974
+  transaction_uuid: eda0fd0f-4487-42c8-a2bc-6a35835be6cf
+  environment: production
+  status: changed
